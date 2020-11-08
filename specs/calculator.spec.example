@@ -17,13 +17,13 @@ describe('Calculator 100% coverage', () => {
     expect(calculator(2, '/', 2)).toBe(1);
   });
   test('throw error when operand A is not a number', () => {
-    expect(() => calculator('Hi!', '*', 2)).toThrow();
+    expect(() => calculator('?', '*', 2)).toThrow();
   });
   test('throw error when operand B is not a number', () => {
-    expect(() => calculator(0, '*', 'Echo')).toThrow();
+    expect(() => calculator(2, '*', '?')).toThrow();
   });
-  test('throw error when operator not valid', () => {
-    expect(() => calculator(1, '&', 1)).toThrow();
+  test('throw error when operator is not valid', () => {
+    expect(() => calculator(2, '?', 2)).toThrow();
   });
 });
 
